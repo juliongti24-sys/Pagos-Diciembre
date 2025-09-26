@@ -72,25 +72,3 @@ let calcularAguinaldo = (sueldoBase, mesesTrabajados) => {
     return totalAPagar.toFixed(2);     // Sueldo base + totalAguinaldo
     
 };
-
-// --- Ejemplos para la verificación ---
-
-// El caso del usuario: 5000 sueldo y 23 meses (Esperado: Total a pagar 8,100)
-const casoUsuario = calcularAguinaldo("Juan Perez", 5000, 23);
-console.log(`Caso Usuario (23 meses):`, casoUsuario); 
-// Resultado: { nombre: 'Juan Perez', totalAguinaldo: '3100.00', totalAPagar: '8100.00' }
-
-// Ejemplo 1: 5000 sueldo y 8 meses (Esperado: 5,800)
-const ejemplo1 = calcularAguinaldo("Ana Garcia", 5000, 8);
-console.log(`Ejemplo 1 (8 meses):`, ejemplo1);
-// Resultado: { nombre: 'Ana Garcia', totalAguinaldo: '800.00', totalAPagar: '5800.00' }
-
-// Ejemplo 2: 5000 sueldo y 48 meses (Esperado: 13,000)
-const ejemplo2 = calcularAguinaldo("Luis Torres", 5000, 48);
-console.log(`Ejemplo 2 (48 meses):`, ejemplo2); 
-// Resultado: { nombre: 'Luis Torres', totalAguinaldo: '8000.00', totalAPagar: '13000.00' }
-
-// Ejemplo 4: 5000 sueldo y 72 meses (Esperado: 15,000) - Este caso dispara el máximo de $10,000 en la parte de años.
-const ejemplo4 = calcularAguinaldo("Sofia Ramos", 5000, 72);
-console.log(`Ejemplo 4 (72 meses):`, ejemplo4);
-// Resultado: { nombre: 'Sofia Ramos', totalAguinaldo: '10000.00', totalAPagar: '15000.00' }
